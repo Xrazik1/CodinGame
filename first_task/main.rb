@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
-
+class TuringMachine
+  def initialize(params)
+    @tape            = Array.new(params[:tape_length], 0)
+    @head_position   = params[:head_position]
+    @current_state   = params[:state]
+    @actions         = params[:actions]
+    @actions_counter = 0
+  end
+end
 
 test_params = {
   tape_length: 4,
@@ -33,5 +41,7 @@ test_params = {
     ]
   }
 }
+
+machine = TuringMachine.new(test_params)
 
 
