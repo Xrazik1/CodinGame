@@ -22,6 +22,23 @@ class TuringMachine
   def increase_actions_counter
     @actions_counter += 1
   end
+
+  def write_state(state)
+    @current_state = state
+  end
+
+  def write_value(value)
+    @tape[@head_position] = value
+  end
+
+  def write_direction(direction)
+    case direction
+    when 'R'
+      move_head_right
+    when 'L'
+      move_head_left
+    end
+  end
 end
 
 test_params = {
