@@ -8,6 +8,20 @@ class TuringMachine
     @actions         = params[:actions]
     @actions_counter = 0
   end
+
+  private
+
+  def move_head_left
+    @head_position -= 1
+  end
+
+  def move_head_right
+    @head_position += 1
+  end
+
+  def increase_actions_counter
+    @actions_counter += 1
+  end
 end
 
 test_params = {
@@ -43,5 +57,4 @@ test_params = {
 }
 
 machine = TuringMachine.new(test_params)
-
 
