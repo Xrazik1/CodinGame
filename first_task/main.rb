@@ -15,7 +15,9 @@ class TuringMachine
     loop do
       return get_report if went_out_of_bounds? || @current_state == STOP_STATE
 
+      # Берёт текущее значение, на которое указывает головка на ленте
       current_value = @tape[@head_position]
+      # На основании этого значения и текущего состояния вытаскивает информацию из списка инструкций
       new_value     = @actions[@current_state][current_value][:write_value]
       new_direction = @actions[@current_state][current_value][:move_to]
       new_state     = @actions[@current_state][current_value][:to_state]
