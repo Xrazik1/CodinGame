@@ -39,6 +39,18 @@ class TuringMachine
       move_head_left
     end
   end
+
+  def handle_out_of_bounds
+    @head_position = -1         if @head_position.negative?
+    @head_position = @tape.size if @head_position > @tape.size - 1
+  end
+
+  def went_out_of_bounds?
+    return true if @head_position > @tape.size - 1
+    return true if @head_position.negative?
+
+    false
+  end
 end
 
 test_params = {
