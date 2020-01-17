@@ -15,6 +15,11 @@ class TuringMachine
     loop do
       return get_report if went_out_of_bounds? || @current_state == STOP_STATE
 
+      current_value = @tape[@head_position]
+      new_value     = @actions[@current_state][current_value][:write_value]
+      new_direction = @actions[@current_state][current_value][:move_to]
+      new_state     = @actions[@current_state][current_value][:to_state]
+
     end
   end
 
