@@ -1,3 +1,32 @@
+# frozen_string_literal: true
+
+# Auto-generated code below aims at helping you parse
+# the standard input according to the problem statement.
+
+_, tape_length, head_position = gets.split(' ').collect(&:to_i)
+actions = {}
+start = gets.chomp
+n = gets.to_i
+n.times do
+  stateactions = gets.chomp
+  stateactions = stateactions.split(':')
+  state = stateactions[0]
+
+  actions[stateactions[0]] = []
+  stateactions = stateactions[1].split(';')
+
+  stateactions.each do |action|
+    action = action.split(' ')
+    actions[state] << {
+      write_value: action[0].to_i,
+      move_to: action[1],
+      to_state: action[2]
+    }
+  end
+end
+
+# Write an action using puts
+# To debug: STDERR.puts "Debug messages..."
 
 class TuringMachine
   STOP_STATE = 'HALT'
