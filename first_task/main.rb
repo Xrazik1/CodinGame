@@ -11,6 +11,13 @@ class TuringMachine
     @actions_counter = 0
   end
 
+  def run
+    loop do
+      return get_report if went_out_of_bounds? || @current_state == STOP_STATE
+
+    end
+  end
+
   private
 
   def get_report
@@ -99,3 +106,4 @@ test_params = {
 
 machine = TuringMachine.new(test_params)
 
+puts machine.run
