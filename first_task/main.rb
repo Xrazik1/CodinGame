@@ -20,6 +20,10 @@ class TuringMachine
       new_direction = @actions[@current_state][current_value][:move_to]
       new_state     = @actions[@current_state][current_value][:to_state]
 
+      write_value(new_value)
+      write_direction(new_direction)
+      increase_actions_counter
+      write_state(new_state)
     end
   end
 
