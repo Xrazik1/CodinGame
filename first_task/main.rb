@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class TuringMachine
+  STOP_STATE = 'HALT'
+
   def initialize(params)
     @tape            = Array.new(params[:tape_length], 0)
     @head_position   = params[:head_position]
