@@ -11,6 +11,16 @@ class TuringMachine
 
   private
 
+  def get_report
+    handle_out_of_bounds if went_out_of_bounds?
+
+    {
+      actions_count: @actions_counter,
+      head_position: @head_position,
+      tape: @tape
+    }
+  end
+
   def move_head_left
     @head_position -= 1
   end
