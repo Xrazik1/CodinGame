@@ -1,4 +1,5 @@
-# frozen_string_literal: true
+# https://www.codingame.com/training/hard/turing-machine
+# All the tests are successfully passed
 
 # Auto-generated code below aims at helping you parse
 # the standard input according to the problem statement.

@@ -1,5 +1,5 @@
 # https://www.codingame.com/training/hard/simplify-selection-ranges
-# All the tests are successfully passed
+# All the tests has successfully passed
 
 # Auto-generated code below aims at helping you parse
 # the standard input according to the problem statement.
