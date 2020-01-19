@@ -13,3 +13,6 @@ def create_range_string(array)
   "#{array.first}-#{array.last}"
 end
 
+ranges = numbers.chunk_while { |current_n, next_n| (current_n + 1) == next_n }
+
+
