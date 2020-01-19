@@ -15,4 +15,7 @@ end
 
 ranges = numbers.chunk_while { |current_n, next_n| (current_n + 1) == next_n }
 
+result = ranges.map do |range|
+  range.size < 3 ? range : create_range_string(range)
+end
 
