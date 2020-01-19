@@ -9,3 +9,7 @@ numbers = gets.chomp.tr('[]', '').split(',').map(&:to_i).sort
 # Write an action using puts
 # To debug: STDERR.puts "Debug messages..."
 
+def create_range_string(array)
+  "#{array.first}-#{array.last}"
+end
+
