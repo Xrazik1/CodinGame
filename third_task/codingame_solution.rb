@@ -9,6 +9,12 @@ n, k = gets.split(" ").collect {|x| x.to_i}
 result      = []
 sum_members = Array(1..n)
 
+def remove_too_many_candies(combos, max)
+  combos.select do |combo|
+    combo.select {|candies| candies > max }.empty?
+  end
+end
+
 def remove_incorrect_sum(combos, sum)
   combos.select { |combo| combo.sum == sum  }
 end
@@ -17,5 +23,6 @@ end
   combos = sum_members.repeated_permutation(index).to_a
 
   combos = remove_incorrect_sum(combos, n)
+  combos = remove_too_many_candies(combos, k)
 
 end
