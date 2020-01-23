@@ -25,4 +25,5 @@ end
   combos = remove_incorrect_sum(combos, n)
   combos = remove_too_many_candies(combos, k)
 
+  result << combos unless combos.empty?
 end
