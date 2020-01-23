@@ -27,3 +27,8 @@ end
 
   result << combos unless combos.empty?
 end
+
+result.flatten(1).sort.each do |combo|
+  combo = combo.join(' ')
+  puts combo
+end
