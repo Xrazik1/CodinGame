@@ -1,4 +1,4 @@
-# https://www.codingame.com/training/hard/simplify-selection-ranges
+# https://www.codingame.com/training/hard/candies
 # All the tests has successfully passed
 
 # Auto-generated code below aims at helping you parse
